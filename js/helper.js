@@ -65,7 +65,7 @@ function logClicks(x,y) {
 };
 
 $(document).click(function(loc) {
-  logClicks(loc.offsetX, loc.offsetY);
+  logClicks(loc.pageX, loc.pageY);
 });
 
 

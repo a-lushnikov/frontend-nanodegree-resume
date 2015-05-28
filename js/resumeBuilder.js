@@ -27,6 +27,13 @@ var bio = {
             $('#topContacts').append(HTMLblog.fillData('not yet'));
             $('#topContacts').append(HTMLlocation.fillData(this.contacts.location));
 
+            $('#footerContacts').append(HTMLmobile.fillData(this.contacts.mobile));
+            $('#footerContacts').append(HTMLemail.fillData(this.contacts.email));
+            $('#footerContacts').append(HTMLtwitter.fillData(this.contacts.twitter));
+            $('#footerContacts').append(HTMLgithub.fillData(this.contacts.github));
+            $('#footerContacts').append(HTMLblog.fillData('not yet'));
+            $('#footerContacts').append(HTMLlocation.fillData(this.contacts.location));
+
             $('#header').append(HTMLbioPic.fillData(this.biopic));
             $('#header').append(HTMLwelcomeMsg.fillData(this.welcomeMessage));
 
@@ -157,7 +164,39 @@ var projects = {
 })();
 
 $(document).ready(function() {
+      // so not to recalculate this on mousemove
+      var pic = $('.biopic')[0];
+      var rC = {
+            x : pic.getBoundingClientRect().left + pic.clientWidth / 2,
+            y : pic.getBoundingClientRect().top + pic.clientHeight / 2
+      };
+
+      // applying some html fixes (we're not supposed to modify html hardly for
+      // this task, right? )
       $('#skillsH3').before('<div id="skillsContainer"></div>');
       $('#skillsH3').detach().appendTo('#skillsContainer');
       $('#skills').detach().appendTo('#skillsContainer');
+
+      $('.container').mousemove(function(evt) {
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+
+            var rX = (mouseX - rC.x) / 20;
+            var rY = (mouseY - rC.y) / 20;
+            if(rX < -45) {
+                  rX = -45;
+            } else if (rX > 45) {
+                  rX = 45;
+            }
+
+            rX = rX < 0 ? 180-rX : rX;
+
+            if(rY < -45) {
+                  rY = -45;
+            } else if (rY > 45) {
+                  rY = 45;
+            }
+
+            $(pic).css('transform', 'rotateX(rYdeg) rotateY(-rXdeg)'.replace('rX',rX).replace('rY',rY));
+      });
 });
