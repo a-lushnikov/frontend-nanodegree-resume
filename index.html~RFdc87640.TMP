@@ -12,8 +12,8 @@
   <script src="js/helper.js"></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </head>
-<body>
-  <div id="main" class="container">
+<body class="container">
+  <div id="main" class="row">
     <div id="header" class="center-content clearfix col-xs-12">
       <ul id="topContacts" class='list-inline'>
       </ul>
@@ -23,22 +23,17 @@
       <h2 class="col-xs-12">Work Experience</h2>
     </div>
 
-    <hr>
-
     <div id="projects" class="row">
       <h2 class="col-xs-12">Projects</h2>
     </div>
-
-    <hr>
 
     <div id="education" class="row">
       <h2 class="col-xs-12">Education</h2>
     </div>
 
-    <hr>
-
     <div id="mapDiv" class="row">
       <h2>Where I've Lived and Worked</h2>
+
     </div>
 
     <div id="letsConnect" class='dark-gray row'>
