@@ -1,4 +1,4 @@
-* {
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -32,7 +32,7 @@ img {
 }
 
 #header {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 
 header a {
@@ -48,7 +48,7 @@ header a {
 }
 
 .education-entry:nth-of-type(even) {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 };
 
 .work-entry {
@@ -56,7 +56,7 @@ header a {
 }
 
 .work-entry:nth-of-type(even) {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 };
 
 .project-entry {
@@ -64,7 +64,7 @@ header a {
 }
 
 .project:nth-of-type(even) {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 };
 
 skillsContainer {
