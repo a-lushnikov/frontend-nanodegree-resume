@@ -23,14 +23,14 @@ var bio = {
             $("#topContacts").append(fillData(HTMLemail, this.contacts.email));
             $("#topContacts").append(fillData(HTMLtwitter, this.contacts.twitter));
             $("#topContacts").append(fillData(HTMLgithub, this.contacts.github));
-            $("#topContacts").append(fillData("HTMLblog, not yet"));
+            $("#topContacts").append(fillData(HTMLblog, "not yet"));
             $("#topContacts").append(fillData(HTMLlocation, this.contacts.location));
 
             $("#footerContacts").append(fillData(HTMLmobile, this.contacts.mobile));
             $("#footerContacts").append(fillData(HTMLemail, this.contacts.email));
             $("#footerContacts").append(fillData(HTMLtwitter, this.contacts.twitter));
             $("#footerContacts").append(fillData(HTMLgithub, this.contacts.github));
-            $("#footerContacts").append(fillData("HTMLblog, not yet"));
+            $("#footerContacts").append(fillData(HTMLblog, "not yet"));
             $("#footerContacts").append(fillData(HTMLlocation, this.contacts.location));
 
             $("#header").append(fillData(HTMLbioPic, this.biopic));
