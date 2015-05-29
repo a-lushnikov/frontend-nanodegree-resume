@@ -15,7 +15,11 @@ var bio = {
     "welcomeMessage": "Hi there",
     "skills": ["woof", "bark", "hardcore coding"],
     "biopic": "images/dog.jpg",
-    display: function () {
+    // do not really understand why do we need it in "" in here as it stopped
+    // being ECMA-404 JSON from the moment we decided to define function on
+    // the object. Since that moment it started being JS object instead of
+    // JSON data. Anyway.
+    "display": function () {
         $("#header").prepend(
             fillData(HTMLheaderName, this.name) +
             fillData(HTMLheaderRole, this.role));
@@ -75,7 +79,7 @@ var education = {
         "date": 2015,
         "url": "https://www.udacity.com/course/nd002"
     }],
-    display: function (){
+    "display": function (){
         $.each(this.schools, function (i, v) {
             var $eEntry = $(HTMLschoolStart);
 
@@ -113,7 +117,7 @@ var work = {
         "dates": "2012-2015",
         "description": "woof woof",
     }],
-    display: function () {
+    "display": function () {
         $.each(this.jobs, function (i, v) {
             var $wEntry = $(HTMLworkStart);
 
@@ -136,7 +140,7 @@ var projects = {
         "description": "Work done during GSoC 2012",
         "images": ["images/GSoC.png"],
     }],
-    display: function () {
+    "display": function () {
         $.each(this.projects, function (i, v) {
             var $pEntry = $(HTMLprojectStart);
 
